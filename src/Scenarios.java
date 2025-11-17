@@ -47,8 +47,15 @@ public class Scenarios {
                         String response4 = scan.nextLine();
                         if(response4.equals("yes")) {
                             System.out.println("You choose to just stand there.It is awkward. Franco and Nicole talk a bit and you join in. Mr.Blackwood is too busy on his computer to notice... you idiot why are you still here? Absolute FAILURE. Get out of my sight.");
-                        else if(response4) {
-
+                        }
+                       else  {
+                            System.out.println("Good choice. You decide to return back to your seat, great job. You work on your project for a little bit, then you realize you need help again! You only have 2 friends in this class, who do you ask? Franco, or Nicole?");
+                            String response5 = scan.nextLine();
+                            if(response5.equals("Franco")) {
+                                System.out.println("Good choice. He is someone you know, trust and have asked before. He helps you briefly and then you go away, not after having a bit of a conversation with him however and Nicole");
+                            }
+                            else {
+                                System.out.println("The choice.. has been unknown ");
                             }
                         }
                     }
