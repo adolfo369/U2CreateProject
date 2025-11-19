@@ -2,6 +2,7 @@ import java.util.Scanner;
 public class Scenarios {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
+        int count = 0;
         System.out.println("Welcome mysterious traveler! Today you will be entering into the daily class life of Mr. Blackwood. Now without further ado, let us begin!");
         System.out.println("But before you even enter the classroom, we need to discuss what you want to do here");
         System.out.println("If you want to get the rarest reward possible, type Scenario 1");
@@ -31,8 +32,25 @@ public class Scenarios {
                         }
                     }
                 }
+                else {
+                    System.out.println("You didn't want to wait for him? Evil evil.. but I guess I can respect it.");
+                }
             }
-        } else if (response0.equals("Scenario 2")) {
+            else {
+                System.out.println("You failed. Give up. You are an evil person for that one.");
+                System.out.println("You see your friends, Franco and Nicole, sitting across the room. Do you want to go ask them for help and salute them? Please respond here with a yes or no without any spaces or capital letters: ");
+                String response3 = scan.nextLine();
+                if (response3.equals("yes")) {
+                    System.out.println("Splendid! I can see that you are quite the social butterfly! Enter the secret number for a reward!");
+                    String response4 = scan.nextLine();
+                    if (response4.equals("27")) {
+                        System.out.println("You have just won.... the grand prize! Please come to 6E26 during 9 and 3/4ths period to collect your reward!");
+                    } else {
+                        System.out.println("You failed. Just give up now. I'm done with you. ");
+                    }
+            }
+        }
+            else if (response0.equals("Scenario 2")) {
             System.out.print("You see Mr. Blackwood as you walk in, would you like to say hello? Please respond here with a yes or no without any spaces or capital letters: ");
             String response = scan.nextLine();
             if (response.equals("yes")) {
@@ -98,18 +116,30 @@ public class Scenarios {
                         System.out.println("you failed. go back. you missed a cruical Blackwood moment. Retrace your steps and find your way back here.. foolish person");
                     }
                     else {
-                        System.out.println("A slow tremble overtakes you, as he calls for Nicole to come back and instructs you to exit her seat and stay standing nearby. He begins a LONG speech about discipline and how I can't just sit wherever I would like. Do you stay?");
+                        System.out.println("A slow tremble overtakes you, as he calls for Nicole to come back and instructs you to exit her seat and stay standing nearby.");
+                        System.out.println("He begins a LONG speech about discipline and how I can't just sit wherever I would like to. Do you stay?");
                         String response4 = scan.nextLine();
                         if (response4.equals("yes")) {
                             System.out.println("You truly are a smart one. IF TODAY WAS AN OPPOSITE DAY WHY WOULD YOU STAY");
                         }
                         else {
-                            System.out.println("You walk back to your seat, laughing slightly to yourself as you see Nicole have to bear the burden of it. You feel a twinge of pity, and then return once he has left. You get scolded by both of them while laughing all the while. You have completed the \"Discipline\" Achievement");
+                            System.out.println("You walk back to your seat, laughing slightly to yourself as you see Nicole have to bear the burden of it.");
+                            System.out.println("You feel a twinge of pity, and then return once he has left. You get scolded by both of them while laughing all the while.");
+                            System.out.println("You have completed the \"Discipline Achievement\");");
                             System.out.println("......................................");
                             System.out.println("Multi-Universe Secret Ending Start: You enter the classroom... what do you think will happen today??");
                             String response5 = scan.nextLine();
-                            if (response5.equals("2 hour free class")) {
+                            if (response5.equals("Free class")) {
                                 System.out.println("You are either a genius who got this on the first attempt.. or someone who peeked at the code.. or someone");
+                            }
+                            else {
+                                for (count = 0; !response6.equals("Free Class"); count++)
+                                   String response6 = scan.nextLine();
+                                System.out.println("Multi-Universe Secret Ending Start: You enter the classroom... what do you think will happen today??");
+
+                                if (count==3)
+                                    System.out.println("I guess I will give you a hint, this occurred when there was an alleged \"stabbing\" with freshman");
+
                             }
                         }
                     }
