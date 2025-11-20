@@ -29,14 +29,13 @@ public class Scenarios {
                         }
                         {
 
+
                         }
                     }
-                }
-                else {
+                } else {
                     System.out.println("You didn't want to wait for him? Evil evil.. but I guess I can respect it.");
                 }
-            }
-            else {
+            } else {
                 System.out.println("You failed. Give up. You are an evil person for that one.");
                 System.out.println("You see your friends, Franco and Nicole, sitting across the room. Do you want to go ask them for help and salute them? Please respond here with a yes or no without any spaces or capital letters: ");
                 String response3 = scan.nextLine();
@@ -48,9 +47,11 @@ public class Scenarios {
                     } else {
                         System.out.println("You failed. Just give up now. I'm done with you. ");
                     }
+                }
             }
+
         }
-            else if (response0.equals("Scenario 2")) {
+        else if (response0.equals("Scenario 2")) {
             System.out.print("You see Mr. Blackwood as you walk in, would you like to say hello? Please respond here with a yes or no without any spaces or capital letters: ");
             String response = scan.nextLine();
             if (response.equals("yes")) {
@@ -91,10 +92,8 @@ public class Scenarios {
                         }
                     }
                 }
-
             }
-
-        } else if (response0.equals("Scenario 3")) {
+        } else  {
             System.out.println("Good choice traveler. You are now going to move through the most notable Blackwood moments, and maybe you will get the secret ending... the one nobody knows about. ");
             System.out.println("Multi-Universe Start 1: You enter the classroom, thinking it is going to be a good and normal day. Will it be?");
             String response1 = scan.nextLine();
@@ -104,25 +103,22 @@ public class Scenarios {
                 System.out.println("Good response. We have effectively weeded out the weak from our ranks. Now, go find Franco and talk with him ");
                 System.out.println("You hear the bell ring.. I suppose it is time to venture back into your seat and start the work no?");
                 String response2 = scan.nextLine();
-                if(response2.equals("yes")) {
+                if (response2.equals("yes")) {
                     System.out.println("ewwwwww no we will sit with Franco. pathetic. go to another scenario I can't even look at this.");
-                }
-                else {
+                } else {
                     System.out.println("Good choice. You take the empty seat next to him despite knowing that Nicole will have to sit there. Eh its okay, Blackwood won't care...");
                     System.out.println("Nicole comes over and sits in another seat with her friends.. good your plan has worked");
                     System.out.println("Wait.. you see Blackwood approaching? Oh no, should you go back?");
                     String response3 = scan.nextLine();
                     if (response3.equals("yes")) {
                         System.out.println("you failed. go back. you missed a cruical Blackwood moment. Retrace your steps and find your way back here.. foolish person");
-                    }
-                    else {
+                    } else {
                         System.out.println("A slow tremble overtakes you, as he calls for Nicole to come back and instructs you to exit her seat and stay standing nearby.");
                         System.out.println("He begins a LONG speech about discipline and how I can't just sit wherever I would like to. Do you stay?");
                         String response4 = scan.nextLine();
                         if (response4.equals("yes")) {
                             System.out.println("You truly are a smart one. IF TODAY WAS AN OPPOSITE DAY WHY WOULD YOU STAY");
-                        }
-                        else {
+                        } else {
                             System.out.println("You walk back to your seat, laughing slightly to yourself as you see Nicole have to bear the burden of it.");
                             System.out.println("You feel a twinge of pity, and then return once he has left. You get scolded by both of them while laughing all the while.");
                             System.out.println("You have completed the \"Discipline Achievement\");");
@@ -131,21 +127,47 @@ public class Scenarios {
                             String response5 = scan.nextLine();
                             if (response5.equals("Free class")) {
                                 System.out.println("You are either a genius who got this on the first attempt.. or someone who peeked at the code.. or someone");
-                            }
-                            else {
-                                for (count = 0; !response6.equals("Free Class"); count++)
-                                   String response6 = scan.nextLine();
-                                System.out.println("Multi-Universe Secret Ending Start: You enter the classroom... what do you think will happen today??");
+                            } else {
+                                String response27 = scan.nextLine();
+                                String correctAnswer1 = ("Free Class");
+                                if (response27.equals(correctAnswer1)) {
+                                    System.out.println("You are either a genius who got this on the first attempt.. or someone who peeked at the code.. or someone who failed a lot...");
+                                    System.out.println("Regardless... great job! You have just gotten the secret achievement \"Secret Ending!\"");
+                                } else {
+                                    count = 1;
+                                    while (!response27.equals(correctAnswer1)) {
+                                        System.out.println("Count is " + count);
+                                        System.out.println("Multi-Universe Secret Ending Start: You enter the classroom... what do you think will happen today??");
+                                        response27 = scan.nextLine();
+                                        count++;
 
-                                if (count==3)
-                                    System.out.println("I guess I will give you a hint, this occurred when there was an alleged \"stabbing\" with freshman");
 
+                                        if (count == 3) {
+                                            System.out.println("You clearly need a hint... this happened on the day of an alleged stabbing.");
+                                        } else if (count == 5) {
+                                            System.out.println("One of the words in the answer is \"class\"");
+                                        } else if (count == 10) {
+                                            System.out.println("The other word can be found by decoding this anagram: \"reef\"");
+                                        } else if (count > 15)
+                                            System.out.println("Okay uhh you clearly need help. The answer is \"Free Class\". Put that in and you will get your reward.. just yeah.");
+                                    }
+                                    if (response27.equals(correctAnswer1)) {
+                                        System.out.println("You are either a genius who got this on the first attempt.. or someone who peeked at the code.. or someone who failed a lot...");
+                                        System.out.println("Regardless... great job! You have just gotten the secret achievement \"Secret Ending!\"");
+                                    }
+
+
+                                }
                             }
                         }
                     }
                 }
             }
-
         }
     }
 }
+
+
+
+
+
